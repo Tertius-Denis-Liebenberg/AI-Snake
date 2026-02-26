@@ -1,17 +1,21 @@
 {
-    "max_memory": 100000,
-    "batch_size": 256,
-    "lr": 0.0008,
-    "gamma": 0.9,
-
-    "input": 25,
-    "hidden": [128, 256, 128],
-    "output": 3,
-
+    "batch_size": 64,
+    "lr": 0.0005,  // Higher for quick early adaptation
+    "gamma": 0.99,
+    "grid_size": 40,
+    "channels": 4,
     "file_name": "model.pth",
     "render_ui": false,
-
-    "epsilon_start": 1.0,
+    "epsilon_start": 0.9,
     "epsilon_min": 0.05,
-    "epsilon_decay": 0.995
+    "epsilon_decay": 0.995,  // Reach 0.05 in ~230 games
+    "ppo_update_steps": 2048,  // Shorter rollouts → frequent updates
+    "ppo_epochs": 20,  // More optimization per rollout
+    "ppo_clip_eps": 0.2,
+    "ppo_gae_lambda": 0.95,
+    "ppo_ent_coef": 0.05,  // Boost exploration
+    "ppo_vf_coef": 0.5,
+    "ppo_batch_size": 64,
+    "ppo_max_grad_norm": 0.5,
+    "use_epsilon": true
 }

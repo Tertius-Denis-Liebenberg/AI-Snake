@@ -1,10 +1,16 @@
 {
-    "eat_food": 10,
-    "eat_special_food": 15,
-    "level_up": 50,
-    "win": 100,
-    "game_over": -15,
-
-    "closer_to_food": 0.01,
-    "away_from_food": -0.015
+    "eat_food": 200,
+    "eat_special_food": 150,
+    "level_up": 150,
+    "win": 500,
+    "game_over": -50,
+    "looping_penalty": -5,
+    "hit_wall_penalty": -5,
+    "into_danger_penalty": -20,
+    "empty_space_bonus": 0.5,
+    "trap_penalty": -40,
+    "closer_to_food": 1.0,
+    "away_from_food": -0.6,
+    "survival_bonus": 0.1,
+    "fill_milestone_bonus": 100
 }
